@@ -1,0 +1,37 @@
+name: flutter_news_app
+description: A new Flutter project.
+
+publish_to: "none" 
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.6 <4.0.0"
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  news_api_flutter_package: ^1.1.0
+  flutter_webview_plugin: ^0.4.0
+  shared_preferences: ^2.0.12
+  test: ^1.24.9
+  mockito: ^5.4.3
+  flutter_driver:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+
+flutter:
+
+  uses-material-design: true
+

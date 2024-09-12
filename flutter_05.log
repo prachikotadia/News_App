@@ -1,0 +1,110 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter test --machine --name ^NewsPageState Tests Setting selected category should update state correctly for BUSINESS( \(variant: .*\))?$ --run-skipped -d windows C:\Users\19ec0\Downloads\mp5-Ritu2807-creator\mp5-Ritu2807-creator\test\news_page_test.dart
+
+## exception
+
+PathAccessException: PathAccessException: Cannot open file, path = 'C:\Users\19ec0\Downloads\mp5-Ritu2807-creator\mp5-Ritu2807-creator\windows\flutter\generated_plugin_registrant.cc' (OS Error: The process cannot access the file because it is being used by another process.
+, errno = 32)
+
+```
+#0      _checkForErrorResponse (dart:io/common.dart:55:9)
+#1      _File.open.<anonymous closure> (dart:io/file_impl.dart:381:7)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+<asynchronous suspension>
+#4      _File.writeAsBytes.<anonymous closure> (dart:io/file_impl.dart:634:34)
+<asynchronous suspension>
+#5      ForwardingFile.writeAsString (package:file/src/forwarding/forwarding_file.dart:136:12)
+<asynchronous suspension>
+#6      ErrorHandlingFile.writeAsString.<anonymous closure> (package:flutter_tools/src/base/error_handling_io.dart:246:24)
+<asynchronous suspension>
+#7      _run (package:flutter_tools/src/base/error_handling_io.dart:556:12)
+<asynchronous suspension>
+#8      _renderTemplateToFile (package:flutter_tools/src/flutter_plugins.dart:38:3)
+<asynchronous suspension>
+#9      _writeCppPluginRegistrant (package:flutter_tools/src/flutter_plugins.dart:967:3)
+<asynchronous suspension>
+#10     writeWindowsPluginFiles (package:flutter_tools/src/flutter_plugins.dart:956:3)
+<asynchronous suspension>
+#11     injectPlugins (package:flutter_tools/src/flutter_plugins.dart:1198:5)
+<asynchronous suspension>
+#12     FlutterProject.ensureReadyForPlatformSpecificTooling (package:flutter_tools/src/project.dart:388:5)
+<asynchronous suspension>
+#13     FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:1743:7)
+<asynchronous suspension>
+#14     FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1389:27)
+<asynchronous suspension>
+#15     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:19)
+<asynchronous suspension>
+#16     CommandRunner.runCommand (package:args/command_runner.dart:212:13)
+<asynchronous suspension>
+#17     FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:355:9)
+<asynchronous suspension>
+#18     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:19)
+<asynchronous suspension>
+#19     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:295:5)
+<asynchronous suspension>
+#20     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:119:9)
+<asynchronous suspension>
+#21     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:19)
+<asynchronous suspension>
+#22     main (package:flutter_tools/executable.dart:90:3)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 3.19.6, on Microsoft Windows [Version 10.0.22631.3447], locale en-US)
+    • Flutter version 3.19.6 on channel stable at C:\Users\19ec0\Downloads\flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision 54e66469a9 (2 weeks ago), 2024-04-17 13:08:03 -0700
+    • Engine revision c4cd48e186
+    • Dart version 3.3.4
+    • DevTools version 2.31.1
+
+[✓] Windows Version (Installed version of Windows is version 10 or higher)
+
+[!] Android toolchain - develop for Android devices (Android SDK version 34.0.0)
+    • Android SDK at C:\Users\19ec0\AppData\Local\Android\sdk
+    ✗ cmdline-tools component is missing
+      Run `path/to/sdkmanager --install "cmdline-tools;latest"`
+      See https://developer.android.com/studio/command-line for more details.
+    ✗ Android license status unknown.
+      Run `flutter doctor --android-licenses` to accept the SDK licenses.
+      See https://flutter.dev/docs/get-started/install/windows#android-setup for more details.
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[✓] Visual Studio - develop Windows apps (Visual Studio Build Tools 2019 16.11.32)
+    • Visual Studio at C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools
+    • Visual Studio Build Tools 2019 version 16.11.34301.259
+    • Windows 10 SDK version 10.0.22621.0
+
+[✓] Android Studio (version 2023.1)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 17.0.7+0-b2043.56-10550314)
+
+[✓] VS Code (version 1.88.1)
+    • VS Code at C:\Users\19ec0\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 3.86.0
+
+[✓] Connected device (3 available)
+    • Windows (desktop) • windows • windows-x64    • Microsoft Windows [Version 10.0.22631.3447]
+    • Chrome (web)      • chrome  • web-javascript • Google Chrome 124.0.6367.61
+    • Edge (web)        • edge    • web-javascript • Microsoft Edge 124.0.2478.67
+
+[✓] Network resources
+    • All expected network resources are available.
+
+! Doctor found issues in 1 category.
+```
